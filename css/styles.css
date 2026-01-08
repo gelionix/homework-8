@@ -41,13 +41,15 @@
 --white-color: #FFFFFF;
 --white-color-transparency: #FFFFFF99;
 --light-gray-color: #F5F4FA;
---Behind-transparent: #00000033;
+--behind-transparent: #00000033;
+--border-color: #EEEEEE;
 }
 
 body {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
+    color: var(--primary-color);
 }
 
 .container {
@@ -175,7 +177,7 @@ body {
 .hero-button-1:active {
     color: var(--brand-color);
     background-color: var(--white-color);
-    box-shadow: 0px 2px 1px var(--Behind-transparent);
+    box-shadow: 0px 2px 1px var(--behind-transparent);
 }
 
 .portfolio-hero {
@@ -292,6 +294,43 @@ padding: 30px;
 
 .team-card-title, .team-card-description {
     text-align: center;
+}
+
+.portfolio-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 34px;
+}
+
+.portfolio-card {
+    flex: 1 1 30%;
+    border: 1px solid var(--border-color);
+}
+
+.portfolio-card-img {
+    height: 294px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portfolio-card-box {
+    padding: 20px 24px;
+}
+
+.portfolio-card-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 1px;
+}
+
+.portfolio-card-description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 4px;
+    color: var(--gray-color);
 }
 
 .footer {
