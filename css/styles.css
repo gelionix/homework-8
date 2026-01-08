@@ -39,16 +39,18 @@
 --secondary-color: #2F303A;
 --gray-color: #757575;
 --white-color: #FFFFFF;
+--white-color-transparency: #FFFFFF99;
 --light-gray-color: #F5F4FA;
+--Behind-transparent: #00000033;
 }
 
-body{
+body {
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
 }
 
-.container{
+.container {
     width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
@@ -94,12 +96,16 @@ body{
     margin-left: auto;
 }
 
-.color{
+.color {
     color: var(--brand-color);
 }
 
-.color_1{
+.color_1 {
     color: var(--gray-color);
+}
+
+.color_1:active {
+    color: var(--brand-color);
 }
 
 .hero {
@@ -137,14 +143,52 @@ body{
     text-decoration: none;
 }
 
-.hero-button, .service-button {
-    background-color: var(--brand-color);
-    color: var(--white-color);
+.btn-1 {
+    padding: 6px 26px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    /* letter-spacing: 1px; */
+    text-decoration: none;
 }
 
-.hero-button:active, .service-button:active{
+.hero-button, .service-button {
+    color: var(--white-color);
+    background-color: var(--brand-color);
+}
+
+.hero-button:active, .service-button:active {
     color: var(--brand-color);
     background-color: var(--white-color);
+}
+
+.hero-button-1 {
+    color: var(--primary-color);
+    background-color: var(--light-gray-color);
+}
+.hero-button-1:hover {
+    color: var(--white-color);
+    background-color: var(--brand-color);
+}
+.hero-button-1:active {
+    color: var(--brand-color);
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 1px var(--Behind-transparent);
+}
+
+.portfolio-hero {
+    padding: 94px 0;
+    /* background: #EEEEEE; */
+}
+
+.buttons {
+    text-align: center;
+}
+
+.buttons button:not(:first-child) {
+    margin-left: 8px;
 }
 
 .doing {
@@ -170,7 +214,7 @@ body{
     letter-spacing: 0.4px;
 }
 
-.doing-100{
+.doing-100 {
     flex: 1 1 23%;
 }
 
@@ -246,11 +290,11 @@ padding: 30px;
     margin-top: 10px;
 }
 
-.team-card-title, .team-card-description{
+.team-card-title, .team-card-description {
     text-align: center;
 }
 
-.footer{
+.footer {
     background: var(--secondary-color);
     padding: 60px 0;
 }
@@ -260,7 +304,7 @@ padding: 30px;
     flex-direction: column;
 } */
 
-.footer-logo{
+.footer-logo {
     display: inline-block;
 }
 
@@ -273,7 +317,7 @@ padding: 30px;
 }
 
 .footer-nav-list a {
-    color: #FFFFFF99;
+    color: var(--white-color-transparency);
 }
 
 li {
