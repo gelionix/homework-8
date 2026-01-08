@@ -32,9 +32,18 @@
     font-display: swap;
 }
 
+:root {
+--font-family: "Roboto", sans-serif;
+--brand-color: #2196F3;
+--primary-color: #212121;
+--secondary-color: #2F303A;
+--gray-color: #757575;
+--white-color: #FFFFFF;
+--light-gray-color: #F5F4FA;
+}
 
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
 }
@@ -46,7 +55,7 @@ body{
 }
 
 .header {
-    background:  #FFFFFF;
+    background:  var(--white-color);
     padding: 25px 0;
     border-bottom: 1px solid #ECECEC;
 }
@@ -74,11 +83,11 @@ body{
 .header-link {
     font-weight: 500;
     text-decoration: none;
-    color: #212121;
+    color: var(--primary-color);
 }
 
 .header-link.active {
-    color: #2196F3;
+    color: var(--brand-color);
 }
 
 .header-contacts {
@@ -86,16 +95,16 @@ body{
 }
 
 .color{
-    color: #2196F3;
+    color: var(--brand-color);
 }
 
 .color_1{
-    color: #757575;
+    color: var(--gray-color);
 }
 
 .hero {
-    background: #2F303A;
-    color: #FFFFFF;
+    background: var(--secondary-color);
+    color: var(--white-color);
 }
 
 .hero-container {
@@ -129,18 +138,18 @@ body{
 }
 
 .hero-button, .service-button {
-    background-color: #2196F3;
-    color: #FFFFFF;
+    background-color: var(--brand-color);
+    color: var(--white-color);
 }
 
 .hero-button:active, .service-button:active{
-    color: #2196F3;
-    background-color: #FFFFFF;
+    color: var(--brand-color);
+    background-color: var(--white-color);
 }
 
 .doing {
     padding: 94px 0;
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
 }
 
 .doing-bloc {
@@ -155,7 +164,7 @@ body{
 }
 
 .doing-attention-text {
-    color: #757575;
+    color: var(--gray-color);
     line-height: 24px;
     margin-top: 10px;
     letter-spacing: 0.4px;
@@ -195,7 +204,7 @@ body{
 
 .team {
     padding: 94px 0;
-    background: #F5F4FA;
+    background: var(--light-gray-color);
 }
 
 .team-title {
@@ -211,7 +220,7 @@ body{
 .team-card {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-    background: #FFFFFF;
+    background: var(--white-color);
     flex: 1 1 23%;
     box-shadow: 0px 2px 1px #00000033;
 }
@@ -233,7 +242,7 @@ padding: 30px;
 
 .team-card-description {
     font-size: 16px;
-    color: #757575;
+    color: var(--gray-color);
     margin-top: 10px;
 }
 
@@ -242,7 +251,7 @@ padding: 30px;
 }
 
 .footer{
-    background: #2F303A;
+    background: var(--secondary-color);
     padding: 60px 0;
 }
 
@@ -268,7 +277,7 @@ padding: 30px;
 }
 
 li {
-    color: #FFFFFF;
+    color: var(--white-color);
 }
 
 .footer-link {
