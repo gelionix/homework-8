@@ -39,7 +39,6 @@
 --secondary-color: #2F303A;
 --gray-color: #757575;
 --white-color: #FFFFFF;
---white-color-transparency: #FFFFFF99;
 --light-gray-color: #F5F4FA;
 --behind-transparent: #00000033;
 --border-color: #EEEEEE;
@@ -61,7 +60,7 @@ body {
 .header {
     background:  var(--white-color);
     padding: 25px 0;
-    border-bottom: 1px solid #ECECEC;
+    border-bottom: 1px var(--border-color);
 }
 
 .header-container {
@@ -152,8 +151,11 @@ body {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    /* letter-spacing: 1px; */
     text-decoration: none;
+}
+
+.btn-1.active {
+    background-color: var(--brand-color);
 }
 
 .hero-button, .service-button {
@@ -182,11 +184,11 @@ body {
 
 .portfolio-hero {
     padding: 94px 0;
-    /* background: #EEEEEE; */
 }
 
 .buttons {
     text-align: center;
+    font-size: 0;
 }
 
 .buttons button:not(:first-child) {
@@ -338,25 +340,18 @@ padding: 30px;
     padding: 60px 0;
 }
 
-/* .footer-container {
-    display: flex;
-    flex-direction: column;
-} */
-
 .footer-logo {
     display: inline-block;
 }
 
-.footer-box {
-    /* display: flex;
-    flex-direction: column;
-    gap: 9px; */
+.footer-nav-list {
     margin-top: 20px;
     line-height: 24px;
 }
 
 .footer-nav-list a {
-    color: var(--white-color-transparency);
+    color: var(--white-color);
+    opacity: 0.6;
 }
 
 li {
