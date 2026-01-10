@@ -270,7 +270,7 @@ body {
     border-bottom-left-radius: 4px;
     background: var(--white-color);
     flex: 1 1 23%;
-    box-shadow: 0px 2px 1px #00000033;
+    box-shadow: 0px 2px 1px var(--behind-transparent);
 }
 
 .team-card-img {
@@ -310,8 +310,36 @@ padding: 30px;
     border: 1px solid var(--border-color);
 }
 
-.portfolio-card-img {
+.portfolio-card:hover{
+    box-shadow: 1px 4px 6px var(--behind-transparent);
+}
+
+.portfolio-card:hover .portfolio-card-text{
+    display: block;
+    align-content: center;
+}
+    
+.portfolio-card-img-bloc {
     height: 294px;
+    position: relative;
+}
+
+.portfolio-card-text {
+    width: 368px;
+    background: rgb(33, 150, 243, 0.9);
+    display: none;
+    position: absolute;
+    inset: 0;
+    color: var(--white-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    padding: 24px;
+}
+
+.portfolio-card-img {
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
