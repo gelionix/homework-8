@@ -177,7 +177,7 @@ body {
     background-color: var(--brand-color);
 }
 .hero-button-1:active {
-    color: var(--brand-color);
+    color: var(--white-color);
     background-color: var(--white-color);
     box-shadow: 0px 2px 1px var(--behind-transparent);
 }
