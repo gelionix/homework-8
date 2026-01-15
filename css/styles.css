@@ -110,8 +110,16 @@ body {
 }
 
 .hero {
-    background: var(--secondary-color);
+    background: var(--secondary-color) url('../img/hero-background.jpg') no-repeat 50%/cover;
     color: var(--white-color);
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    /* background: rgba(0, 0, 0, .5); */
 }
 
 .hero-container {
@@ -121,6 +129,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
@@ -158,12 +168,12 @@ body {
     background-color: var(--brand-color);
 }
 
-.hero-button, .service-button {
+.service-button {
     color: var(--white-color);
     background-color: var(--brand-color);
 }
 
-.hero-button:active, .service-button:active {
+.service-button:active {
     color: var(--brand-color);
     background-color: var(--white-color);
 }
@@ -205,10 +215,66 @@ body {
     gap: 30px; 
 }
 
+.doing-attention {
+    position: relative;
+}
+
+.doing-attention::before {
+    content: '';
+    background: url('../img/doing-bloc-icon-1.png') no-repeat 50% , 
+    url('../img/doing-bloc-background.png') no-repeat 50%;
+    position: absolute;
+    inset: 0;
+    height: 120px;
+    border-radius: 4px;
+}
+
+.doing-h-planning {
+    position: relative;
+}
+
+.doing-h-planning::before {
+    content: '';
+    background: url('../img/doing-bloc-icon-2.png') no-repeat 50%, 
+    url('../img/doing-bloc-background.png') no-repeat 50%;
+    position: absolute;
+    inset: 0;
+    height: 120px;
+    border-radius: 4px;
+}
+
+.doing-planning {
+    position: relative;
+}
+
+.doing-planning::before {
+    content: '';
+    background: url('../img/doing-bloc-icon-3.png') no-repeat 50% , 
+    url('../img/doing-bloc-background.png') no-repeat 50%;
+    position: absolute;
+    inset: 0;
+    height: 120px;
+    border-radius: 4px;
+}
+
+.doing-technologies {
+    position: relative;
+}
+
+.doing-technologies::before {
+    content: '';
+    background: url('../img/doing-bloc-icon-4.png') no-repeat 50% , 
+    url('../img/doing-bloc-background.png') no-repeat 50%;
+    position: absolute;
+    inset: 0;
+    height: 120px;
+    border-radius: 4px;
+}
+
 .doing-attention-title {
     font-weight: 700;
     text-transform: uppercase;
-    
+    padding-top: 150px;
 }
 
 .doing-attention-text {
