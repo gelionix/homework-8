@@ -83,7 +83,7 @@ body {
     column-gap: 50px;
 }
 
-.header-link, .filrer-link {
+.header-link, .filter-link {
     font-weight: 500;
     text-decoration: none;
     color: var(--primary-color);
@@ -97,7 +97,7 @@ body {
     position: relative;
 }
 
-.header-link-items ul {
+.header-link-items > ul {
     display: none;
 }
 
@@ -105,7 +105,7 @@ body {
     color: var(--brand-color);
 }
 
-.header-link-items:hover ul {
+.header-link-items:hover > ul {
     display: block;
 }
 
@@ -113,32 +113,41 @@ body {
     background: var(--light-gray-color);
     border-radius: 4px;
     box-shadow: -2px 4px 6px var(--behind-transparent);
-    padding: 10px;
+    /* padding: 10px; */
 }
 
-.filrer-list {
+.filter-list {
     position: absolute;
     top: 100%;
     left: 0;
     z-index: 1;
 }
 
-.filrer-list-contacts {
+.filter-list-contacts {
     position: absolute;
-    top: -50%;
-    right: 115%;
+    top: -10px;
+    right: 100%;
+    display: none;
 }
 
-.filrer-list-item {
+.filter-list-item {
     position: relative;
 }
 
-.filrer-list-item:not(:first-child) {
-    margin-top: 20px;
+.filter-list-item {
+    margin: 10px 0;
 }
 
-.filrer-link:hover {
+.filter-link {
+    padding: 10px;
+}
+
+.filter-link:hover {
     color: var(--brand-color);
+}
+
+.filter-list-item:hover > ul {
+    display: block;
 }
 
 .header-contacts {
@@ -267,6 +276,7 @@ body {
 .doing-bloc-card {
     flex: 1 1 23%;
     position: relative;
+    padding-top: 150px;
 }
 
 .doing-bloc-card::before {
@@ -300,7 +310,6 @@ body {
 .doing-attention-title {
     font-weight: 700;
     text-transform: uppercase;
-    padding-top: 150px;
 }
 
 .doing-attention-text {
