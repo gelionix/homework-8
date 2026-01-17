@@ -97,7 +97,7 @@ body {
     position: relative;
 }
 
-.header-link-items > ul {
+.header-link-items ul {
     display: none;
 }
 
@@ -105,7 +105,7 @@ body {
     color: var(--brand-color);
 }
 
-.header-link-items:hover > ul {
+.header-link-items:hover .filter-list {
     display: block;
 }
 
@@ -113,7 +113,6 @@ body {
     background: var(--light-gray-color);
     border-radius: 4px;
     box-shadow: -2px 4px 6px var(--behind-transparent);
-    /* padding: 10px; */
 }
 
 .filter-list {
@@ -127,7 +126,6 @@ body {
     position: absolute;
     top: -10px;
     right: 100%;
-    display: none;
 }
 
 .filter-list-item {
@@ -146,7 +144,7 @@ body {
     color: var(--brand-color);
 }
 
-.filter-list-item:hover > ul {
+.filter-list-item:hover .filter-list-contacts {
     display: block;
 }
 
