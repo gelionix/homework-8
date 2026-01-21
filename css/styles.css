@@ -381,24 +381,17 @@ body {
     margin-top: 50px;
 }
 
-.team-card-icons > .team-card-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--white-color);
-    border-radius: 50%;
-}
-
 .team-card-icon.active {
     color: var(--white-color);
     background-color: var(--brand-color);
 }
 
-.team-card-icon:hover a {
+.team-card-icon:hover {
     color: var(--white-color);
     background-color: var(--brand-color);
 }
 
-.team-card-icon:active a {
+.team-card-icon:active {
     color: var(--brand-color);
     background-color: var(--white-color);
     box-shadow: 0px 2px 4px var(--behind-transparent);
@@ -410,18 +403,24 @@ body {
 }
 
 .team-card-icon {
-    text-align: center;
-    color: var(--icons-color)
-}
-
-.team-card-icon-link {
     width: 44px;
     height: 44px;
+    color: var(--icons-color);
+    background: var(--white-color);
+    border-radius: 50%;
+    display: block;
+    align-content: center;
+    text-align: center;
+}
+
+/* .team-card-icon-link {
+    width: 100%;
+    height: 100%;
     display: block;
     border-radius: 50%;
     align-content: center;
     color: var(--icons-color)
-}
+} */
 
 .team-card-icons {
     display: flex;
@@ -479,17 +478,17 @@ padding: 30px;
 
 .customers-card {
     border: 1px solid var(--icons-color);
+    color: var(--icons-color);
     border-radius: 4px;
     width: 170px;
     height: 92px;
-    text-align: center;
+    display: block;
     align-content: center;
-    color: var(--icons-color);
+    text-align: center;
 }
 
 .customers-card:hover {
-    color: var(--brand-color);
-    border-color: var(--brand-color);
+    --icons-color: var(--brand-color);
 }
 
 .customers-card:active {
@@ -497,8 +496,7 @@ padding: 30px;
 }
 
 .customers-card.active {
-    color: var(--brand-color);
-    border-color: var(--brand-color);
+    --icons-color: var(--brand-color);
 }
 
 .customers-card svg {
@@ -611,13 +609,6 @@ li {
     gap: 20px;
 }
 
-.footer-card-icons .team-card-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--white-color);
-    border-radius: 50%;
-}
-
 .footer-card-icons svg {
     width: 20px;
     height: 20px;
@@ -645,6 +636,7 @@ li {
     color: var(--white-color);
     background-color: var(--brand-color);
 }
+
 .foot:active {
     color: var(--brand-color);
     background-color: var(--white-color);
