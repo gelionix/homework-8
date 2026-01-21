@@ -355,6 +355,7 @@ body {
     position: absolute;
     
 }
+
 .doing-cards-img p {
     right: 0;
     bottom: 0;
@@ -364,6 +365,7 @@ body {
     text-align: center;
     align-content: center;
 }
+
 .team {
     padding: 94px 0;
     background: var(--light-gray-color);
@@ -391,12 +393,12 @@ body {
     background-color: var(--brand-color);
 }
 
-.team-card-icon:hover {
+.team-card-icon:hover a {
     color: var(--white-color);
     background-color: var(--brand-color);
 }
 
-.team-card-icon:active {
+.team-card-icon:active a {
     color: var(--brand-color);
     background-color: var(--white-color);
     box-shadow: 0px 2px 4px var(--behind-transparent);
@@ -408,15 +410,24 @@ body {
 }
 
 .team-card-icon {
-    align-content: center;
     text-align: center;
+    color: var(--icons-color)
+}
+
+.team-card-icon-link {
+    width: 44px;
+    height: 44px;
+    display: block;
+    border-radius: 50%;
+    align-content: center;
     color: var(--icons-color)
 }
 
 .team-card-icons {
     display: flex;
-    justify-content: space-between;
-    padding: 8px 32px 30px;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 10px;
 }
 
 .team-card {
@@ -434,7 +445,7 @@ body {
 }
 
 .team-card-box {
-padding: 30px 30px 8px;
+padding: 30px;
 }
 
 .team-card-title {
