@@ -513,7 +513,7 @@ padding: 30px;
 .portfolio-card {
     flex: 1 1 30%;
     border: 1px solid var(--border-color);
-    transition: all .8s linear;
+    transition: all .8s;
 }
 
 .portfolio-card:hover{
@@ -523,6 +523,7 @@ padding: 30px;
 
 .portfolio-card:hover .portfolio-card-text{
     opacity: 1;
+    top: 0;
 }
 
 .portfolio-card-img-bloc {
@@ -536,14 +537,16 @@ padding: 30px;
     opacity: 0;
     align-content: center;
     position: absolute;
-    inset: 0;
+    top: 80%;
+    left: 0;
+    bottom: 0;
     color: var(--white-color);
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: 0.5px;
     padding: 24px;
-    transition: opacity .8s linear;
+    transition: all .8s;
 }
 
 .portfolio-card-img {
