@@ -99,7 +99,8 @@ body {
 }
 
 .header-link-items ul {
-    display: none;
+    opacity: 0;
+    z-index: -1;
 }
 
 .header-link:hover {
@@ -107,7 +108,14 @@ body {
 }
 
 .header-link-items:hover .filter-list {
-    display: block;
+    opacity: 1;
+    z-index: 1;
+    top: 100%;
+    transition: all .5s linear;
+}
+
+.header-contacts {
+    margin-left: auto;
 }
 
 .bg {
@@ -118,22 +126,19 @@ body {
 
 .filter-list {
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
-    z-index: 1;
 }
 
 .filter-list-contacts {
     position: absolute;
     top: -10px;
-    right: 100%;
+    right: 0%;
+    transition: all .5s linear;
 }
 
 .filter-list-item {
     position: relative;
-}
-
-.filter-list-item {
     margin: 10px 0;
 }
 
@@ -146,11 +151,8 @@ body {
 }
 
 .filter-list-item:hover .filter-list-contacts {
-    display: block;
-}
-
-.header-contacts {
-    margin-left: auto;
+    opacity: 1;
+    transform: translateX(-99px);
 }
 
 .color {
@@ -238,15 +240,20 @@ body {
 .hero-button-1 {
     color: var(--primary-color);
     background-color: var(--light-gray-color);
+    transition: all .3s linear;
 }
+
 .hero-button-1:hover {
     color: var(--white-color);
     background-color: var(--brand-color);
+    transform: scale(1.05);
 }
+
 .hero-button-1:active {
     color: var(--primary-color);
     background-color: var(--white-color);
     box-shadow: 0px 2px 1px var(--behind-transparent);
+    transform: scale(1);
 }
 
 .portfolio-hero {
@@ -514,15 +521,16 @@ padding: 30px;
 .portfolio-card {
     flex: 1 1 30%;
     border: 1px solid var(--border-color);
+    transition: all .8s linear;
 }
 
 .portfolio-card:hover{
     box-shadow: 1px 4px 6px var(--behind-transparent);
+    transform: scale(1.01);
 }
 
 .portfolio-card:hover .portfolio-card-text{
-    display: block;
-    align-content: center;
+    opacity: 1;
 }
 
 .portfolio-card-img-bloc {
@@ -533,7 +541,8 @@ padding: 30px;
 .portfolio-card-text {
     width: 368px;
     background: rgb(33, 150, 243, 0.9);
-    display: none;
+    opacity: 0;
+    align-content: center;
     position: absolute;
     inset: 0;
     color: var(--white-color);
@@ -542,6 +551,7 @@ padding: 30px;
     line-height: 28px;
     letter-spacing: 0.5px;
     padding: 24px;
+    transition: opacity .8s linear;
 }
 
 .portfolio-card-img {
