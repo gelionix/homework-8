@@ -111,7 +111,6 @@ body {
     opacity: 1;
     z-index: 1;
     top: 100%;
-    left: 0;
 }
 
 .header-contacts {
@@ -127,8 +126,8 @@ body {
 .filter-list {
     position: absolute;
     top: 0;
-    left: 75px;
-    transition: all .3s linear;
+    left: 0;
+    transition: all .5s linear;
 }
 
 .filter-list-contacts {
