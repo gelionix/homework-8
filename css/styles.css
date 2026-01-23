@@ -110,7 +110,7 @@ body {
 .header-link-items:hover .filter-list {
     opacity: 1;
     z-index: 1;
-    top: 100%;
+    transform: translate(5px, 0);
 }
 
 .header-contacts {
@@ -125,16 +125,15 @@ body {
 
 .filter-list {
     position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .5s linear;
+    transition: all .3s linear;
+    transform: translateY(-15px);
 }
 
 .filter-list-contacts {
     position: absolute;
     top: -10px;
     right: 0%;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 .filter-list-item {
@@ -420,7 +419,7 @@ body {
     display: block;
     align-content: center;
     text-align: center;
-    transition: all .5s linear;
+    transition: all .2s linear;
 }
 
 .team-card-icons {
@@ -486,7 +485,7 @@ padding: 30px;
     display: block;
     align-content: center;
     text-align: center;
-    transition: all .5s linear;
+    transition: all .3s linear;
 }
 
 .customers-card:hover {
@@ -523,12 +522,13 @@ padding: 30px;
 
 .portfolio-card:hover .portfolio-card-text{
     opacity: 1;
-    top: 0;
+    transform: translateY(0);
 }
 
 .portfolio-card-img-bloc {
     height: 294px;
     position: relative;
+    overflow: hidden;
 }
 
 .portfolio-card-text {
@@ -537,9 +537,7 @@ padding: 30px;
     opacity: 0;
     align-content: center;
     position: absolute;
-    top: 80%;
-    left: 0;
-    bottom: 0;
+    inset: 0;
     color: var(--white-color);
     font-weight: 400;
     font-size: 18px;
@@ -547,6 +545,7 @@ padding: 30px;
     letter-spacing: 0.5px;
     padding: 24px;
     transition: all .8s;
+    transform: translateY(100%);
 }
 
 .portfolio-card-img {
@@ -557,6 +556,7 @@ padding: 30px;
 
 .portfolio-card-box {
     padding: 20px 24px;
+    position: relative;
 }
 
 .portfolio-card-title {
