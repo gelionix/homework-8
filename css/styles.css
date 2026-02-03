@@ -267,12 +267,10 @@ body {
 }
 
 .buttons {
-  text-align: center;
-  font-size: 0;
-}
-
-.buttons button:not(:first-child) {
-  margin-left: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
 }
 
 .doing {
@@ -805,11 +803,7 @@ li {
   }
 
   .buttons {
-    text-align: start;
-  }
-
-  .buttons button {
-    margin: 0 0 15px 8px;
+    justify-content: flex-start;
   }
 
   .portfolio-cards {
